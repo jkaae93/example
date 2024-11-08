@@ -4,12 +4,12 @@ void main() {
   print('scheme: ${deeplink.scheme}');
   print('host: ${deeplink.host}');
   print('pathSegments: ${deeplink.pathSegments}');
-  print('queryParametersAll: ${deeplink.queryParametersAll}');
+  print('queryParametersAll: ${deeplink.queryParameters}');
   print('');
   
   switch (deeplink.host) {
     case 'community':
-      _moveCommunity(deeplink.pathSegments, deeplink.queryParametersAll);
+      _moveCommunity(deeplink.pathSegments, deeplink.queryParameters);
       break;
     case 'shopping':
       // NOTE: Do something this.
