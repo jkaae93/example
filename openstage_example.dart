@@ -1,6 +1,12 @@
 void main() {
   Uri deeplink = Uri.parse('flutter://community/board/view?id=3043');
 
+  print('scheme: ${deeplink.scheme}');
+  print('host: ${deeplink.host}');
+  print('pathSegments: ${deeplink.pathSegments}');
+  print('queryParametersAll: ${deeplink.queryParametersAll}');
+  print('');
+  
   switch (deeplink.host) {
     case 'community':
       _moveCommunity(deeplink.pathSegments, deeplink.queryParametersAll);
